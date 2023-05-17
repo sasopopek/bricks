@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <script>
+        function draw() {
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            //krog
+            ctx.fillStyle = "#00A308";
+            ctx.beginPath();
+            ctx.arc(220, 220, 50, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
+            //polkrog
+            ctx.fillStyle = "#FF1C0A";
+            ctx.beginPath();
+            ctx.arc(100, 100, 100, 0, Math.PI * 3, true);
+            ctx.closePath();
+            ctx.fill();
+
+            //kvadrat
+            ctx.fillStyle = "rgba(255, 255, 0, .5)"
+            ctx.beginPath();
+            ctx.rect(15, 150, 120, 120);
+            ctx.closePath();
+            ctx.fill();
+
+            //reikotnik
+            ctx.fillStyle = "#214211"
+            ctx.beginPath();
+            ctx.moveTo(50, 50);
+            ctx.lineTo(50, 160);
+            ctx.lineTo(160, 50);
+            ctx.fill();
+        }
+    </script>
+    <title>The bricks</title>
+</head>
+
+<body onload="draw()">
+    <canvas id="canvas" width="300" height="300"></canvas>
+</body>
+
+</html>
